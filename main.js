@@ -1,5 +1,6 @@
 status = "";
 objects = [];
+object_name ="";
 
 function setup() {
   canvas = createCanvas(380, 380);
@@ -37,7 +38,6 @@ function draw() {
           if(objects[i].label == object_name)
           {
             video.stop();
-            objectDetector.detect(gotResult);
             document.getElementById("status_of_object").innerHTML = object_name + " Found";
             synth = window.speechSynthesis;
             utterThis = new SpeechSynthesisUtterance(object_name + "Found");
